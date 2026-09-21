@@ -1,0 +1,46 @@
+name: Feature
+description: Новая функциональность Board Game Club
+title: "[Feature]: "
+labels: ["feature"]
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Цель
+      description: Какую пользовательскую или техническую ценность создаёт задача?
+      placeholder: "Как участник клуба, я хочу..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Что сделать
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Критерии готовности
+      placeholder: |
+        - [ ] Endpoint работает через Swagger
+        - [ ] Ошибочные данные дают корректный HTTP-статус
+        - [ ] Тесты проходят
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Приоритет
+      options:
+        - P0 — блокирует MVP
+        - P1 — нужен после основы
+        - P2 — улучшение
+        - P3 — идея на будущее
+    validations:
+      required: true
