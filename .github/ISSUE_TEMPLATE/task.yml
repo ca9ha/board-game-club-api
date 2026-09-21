@@ -1,0 +1,97 @@
+name: Task
+description: Техническая или продуктовая задача
+title: "[Task]: "
+labels:
+  - task
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Новая задача
+        Опиши один небольшой и проверяемый результат.
+        Желательный размер задачи — одна или две сессии разработки.
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: Цель
+      description: Какую ценность создаёт эта задача?
+      placeholder: |
+        Как разработчик,
+        я хочу ...
+        чтобы ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Что нужно сделать
+      description: Разбей работу на конкретные шаги.
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Критерии готовности
+      description: По каким проверяемым признакам задачу можно закрыть?
+      placeholder: |
+        - [ ] API / код работает
+        - [ ] Ошибочные случаи обработаны
+        - [ ] Тесты проходят
+        - [ ] Документация обновлена при необходимости
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Приоритет
+      options:
+        - P0 — блокирует MVP
+        - P1 — важная задача
+        - P2 — улучшение
+        - P3 — идея на будущее
+    validations:
+      required: true
+
+  - type: dropdown
+    id: epic
+    attributes:
+      label: Эпик
+      options:
+        - Setup
+        - Catalog
+        - Rentals
+        - Voting
+        - Sessions
+        - Telegram
+        - Quality
+        - Infrastructure
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: estimate
+    attributes:
+      label: Оценка
+      description: Оцени в сессиях по 60–90 минут.
+      options:
+        - "1"
+        - "2"
+        - "3+ — нужно разбить задачу"
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Дополнительный контекст
+      description: Ссылки на макеты, связанные Issues, API-контракты или технические заметки.
+      placeholder: |
+        Related to #...
