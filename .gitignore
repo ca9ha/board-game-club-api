@@ -1,0 +1,119 @@
+# Visual Studio / .NET build output
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+[Ww][Ii][Nn]32/
+[Xx]64/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]uild/
+[Bb]uilds/
+
+# Visual Studio user-specific files and folders
+.vs/
+*.user
+*.userosscache
+*.suo
+*.rsuser
+*.sln.docstates
+*.sln.iml
+*.VC.db
+*.VC.VC.opendb
+*.opendb
+*.ipch
+*.aps
+*.ncb
+*.sdf
+*.cache
+
+# Visual Studio Code
+.vscode/
+!.vscode/extensions.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/settings.json
+
+# JetBrains Rider / ReSharper
+.idea/
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# .NET tooling and test results
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+*.opencover.xml
+*.ncrunch*
+*.VisualState.xml
+*.TestAdapter.dll
+
+# NuGet
+*.nupkg
+*.snupkg
+**/packages/*
+!**/packages/build/
+*.nuget.props
+*.nuget.targets
+project.lock.json
+
+# Logs and temporary files
+*.log
+logs/
+[Ll]og/
+[Ll]ogs/
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+appsettings.Local.json
+appsettings.Development.local.json
+secrets.json
+
+# Docker local overrides and runtime data
+compose.override.yaml
+compose.override.yml
+docker-compose.override.yaml
+docker-compose.override.yml
+**/docker-data/
+**/docker-volumes/
+
+# Docker Desktop / Windows containers
+Dockerfile.*.local
+
+# Generated API clients and reports
+coverage/
+coverage*/
+lcov.info
+wwwroot/lib/
+
+# Entity Framework Core local artifacts
+*.db
+*.db-shm
+*.db-wal
+
+# Publish output
+publish/
+artifacts/
+
+# Keep project and container configuration tracked
+!Dockerfile
+!docker-compose.yml
+!docker-compose.yaml
+!.dockerignore
+!Properties/launchSettings.json
