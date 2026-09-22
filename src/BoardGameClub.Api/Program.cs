@@ -12,8 +12,17 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
-}
 
+    app.UseSwaggerUI(options =>
+    {
+        options.SwaggerEndpoint(
+            "/openapi/v1.json",
+            "Board Game Club API v1");
+
+        options.RoutePrefix = "swagger";
+        options.DocumentTitle = "Board Game Club API";
+    });
+}
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
